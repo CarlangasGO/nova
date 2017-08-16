@@ -1,0 +1,26 @@
+doctype html
+html lang="es"
+  head
+    meta content="" name="description" /
+    /! Twitter meta
+    meta content="summary_large_image" property="twitter:card" /
+    meta content="@" property="twitter:site" /
+    meta content="@" property="twitter:creator" /
+   
+    title #{raw_title}
+    /! Open Graph Meta
+    meta content="website" property="og:type" /
+    meta content="ZetaNova" property="og:site_name" /
+    meta content="ZetaNova" property="og:title" /
+    meta content="" property="og:url" /
+    meta content="" property="og:image" /
+    meta content="" property="og:description" /
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    /! Main CSS
+    = csrf_meta_tags
+    = stylesheet_link_tag 'nova', media: 'all', 'data-turbolinks-track': 'reload'
+
+  body
+    == yield
